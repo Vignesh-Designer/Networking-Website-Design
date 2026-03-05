@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-accent: #00ffcc;
+  --color-deep: #050505;
+}
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-white overflow-x-hidden;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.mask-fade {
+  mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+}
